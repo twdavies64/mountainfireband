@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <link rel="stylesheet" media="all" type="text/css" href="css/style3.css" />
+    <title>Mountain Fire Band | Bluegrass Music | Bay Area</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+      <meta content="width=device-width, initial-scale=0.6" name="viewport">
+    <style>
+      body { color: #FFF; font-family: sans-serif; line-height: 1.2; background-color: #966; }
+      h1 { color: #4FFFFF; font-size: 1.2em; padding: 14px 2px 12px; margin: 0px; }
+      h1 em { font-style: normal; color: #999; }
+      a { color: #888; text-decoration: none; }
+       #wrapper { width: 400px; margin-top: 20px; margin-right: auto; margin-bottom: 20px; margin-left: 20px; }
+      
+      ol { padding: 0px; margin: 0px; list-style: decimal-leading-zero inside; color: #ccc; width: 460px; border-top: 1px solid #ccc; font-size: 0.9em; }
+      ol li { position: relative; margin: 0px; padding: 9px 2px 10px; border-bottom: 1px solid #ccc; cursor: pointer; }
+      ol li a { display: block; text-indent: -3.3ex; padding: 0px 0px 0px 20px; }
+      li.playing { color: #aaa; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3); }
+      li.playing a { color: #000; }
+      li.playing:before { content: '♬'; width: 14px; height: 14px; padding: 3px; line-height: 14px; margin: 0px; position: absolute; left: -24px; top: 9px; color: #FFF; font-size: 13px; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
+      
+      #shortcuts { position: fixed; bottom: 0px; width: 100%; color: #666; font-size: 0.9em; margin: 60px 0px 0px; padding: 20px 20px 15px; background: #f3f3f3; background: rgba(240, 240, 240, 0.7); }
+      #shortcuts div { width: 460px; margin: 0px auto; }
+      #shortcuts h1 { margin: 0px 0px 6px; }
+      #shortcuts p { margin: 0px 0px 18px; }
+      #shortcuts em { font-style: normal; background: #d3d3d3; padding: 3px 9px; position: relative; left: -3px;
+        -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); }
+
+      @media screen and (max-device-width: 480px) {
+        #wrapper { position: relative; left: -3%; }
+        #shortcuts { display: none; }
+      }
+    </style>
+<!-- Audio player scripts commented out 2025-11-04: These scripts were in the original site but the homepage is missing the required <audio> HTML element, causing console errors. Code preserved for reference. Audio player works correctly on clips.htm which has its own script includes and proper HTML structure. -->
+<!--
+<script src="audiojs/jquery.js"></script>
+    <script src="audiojs/audio.js"></script>
+-->
+<script>
+/* Audio player initialization commented out 2025-11-04: This jQuery code requires the audiojs library and an <audio> HTML element, neither of which exist on this page. Code preserved for reference. */
+/*
+$(function() {
+        // Setup the player to autoplay the next track
+        var a = audiojs.createAll({
+          trackEnded: function() {
+            var next = $('ol li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.addClass('playing').siblings().removeClass('playing');
+            audio.load($('a', next).attr('data-src'));
+            audio.play();
+          }
+        });
+
+        // Load in the first track
+        var audio = a[0];
+            first = $('ol a').attr('data-src');
+        $('ol li').first().addClass('playing');
+        audio.load(first);
+
+        // Load in a track on click
+        $('ol li').click(function(e) {
+          e.preventDefault();
+          $(this).addClass('playing').siblings().removeClass('playing');
+          audio.load($('a', this).attr('data-src'));
+          audio.play();
+        });
+        // Keyboard shortcuts
+        $(document).keydown(function(e) {
+          var unicode = e.charCode ? e.charCode : e.keyCode;
+             // right arrow
+          if (unicode == 39) {
+            var next = $('li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.click();
+            // back arrow
+          } else if (unicode == 37) {
+            var prev = $('li.playing').prev();
+            if (!prev.length) prev = $('ol li').last();
+            prev.click();
+            // spacebar
+          } else if (unicode == 32) {
+            audio.playPause();
+          }
+        })
+      });
+*/
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+   
+<style type="text/css">
+<!--
+body { background-image: url(images/background2.jpg); background-color: #333; }
+.site .site2 .ctn .ctn_ctn .paragraphe .paragraphe UL #wrapper OL LI A { color: #FFF; }
+.site .site2 .ctn .ctn_ctn .paragraphe .paragraphe #wrapper OL LI A { color: #FFF; text-align: left; }
+a:link { color: #FFF; }
+.site .site2 .menu_v .menu_v_ctn P { color: #FFF; }
+a:visited { color: #FFF; }
+a:hover { color: #D6D6D6; }
+h4 { color: #4FFFFF; }
+h5 { color: #4FFFFF; }
+.site .site2 .foot CENTER SPAN { font-size: 9px; }
+-->
+
+</style>
+
+
+</head>
+
+<body>
+    
+    <div class="site">
+    <div class="site2">
+<div class="header"></div>
+        <div class="clean"></div>
+        <div class="ctn">
+        <div class="ctn_ctn">
+                            <h1>MUSIC</h1>
+                            <h3 align="center"><a href="clips.htm">Click to Listen to Mountain Fire Band Music</a><br /></h3>
+                            <h1>POETRY</h1>
+                <div class="paragraphe">
+                <h2 align="center"><strong>Bill's  poetry website is now up!&nbsp; </strong></h2>
+<p align="center"><strong><a href="https://YOUR_USERNAME.github.io/wtdaviespoetry/">Click to read poems</a> </strong></p>
+<p align="center">&nbsp;</p>
+<center>
+<a href="https://YOUR_USERNAME.github.io/wtdaviespoetry/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/016small.jpg',1)"><img src="images/016small.jpg" alt="click to visit wtdaviespoetry.com website" width="181" height="256" border="0" id="Image2" /></a>
+</p>
+
+</center>
+<p>&nbsp;</p>
+<p align="center"><strong>You can also read some of Bill's cowboy poetry at <a href="http://www.cowboypoetry.com/billdavies.htm">cowboypoetry.com</a>.</strong></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>
+<!-- MENU-LOCATION=NONE -->
+<a href="http://www.cowboypoetry.com/billdavies.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/cowboys.jpg',1)"><img src="images/cowboys.jpg" alt="click to visit cowboypoetry website" width="269" height="187" border="0" id="Image2" /></a></p>
+
+<blockquote>
+<p>
+<!-- MENU-LOCATION=NONE -->
+<a href="http://www.cowboypoetry.com/billdavies.htm">&nbsp; CowboyPoetry.com</a><a href="http://www.zocalo.com"></a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 align="center">Way Back Now</h3>
+<div class="paragraphe">
+<div class="paragraphe">
+<p align="center">by WT Davies</p>
+<p align="center">If you’re going to the way back—well son<br />
+It’s laid out before ya<br />
+It’s just a simple step back, step up<br />
+Into time immortal<br />
+Listen to that old river sing<br />
+It cuts the canyon deep<br />
+It’s there you can lose your thoughts<br />
+Upon its wall so steep</p>
+<p align="center">It's the smoky purple sky<br />
+That rushes in the edge of  night<br />
+Or maybe it’s the stillness<br />
+That will cut you deep and wide</p>
+<p align="center">Could it be that rainbow trout<br />
+That’s always out of reach<br />
+That finds you on the high road<br />
+The fine journey that will keep</p>
+<p align="center">The signs they are many<br />
+When you open to the sight and sound<br />
+Of way back before that brings to light<br />
+Your brief appearance in this<br />
+ World of wonder<br />
+------ Just stop and look around -----</p>
+<h5 align="center">(Way Back Now COPYRIGHT 2013 Bill Davies)</h5>
+<p>&nbsp;</p>
+<h6>&nbsp;</h6>
+<h6 align="center"><img src="images/muir_painting_veyna.jpg" alt="John Muir" width="215" height="331" border="0" id="Image" /><br />
+<br />
+</h6>
+</div>
+</div></div>
+                        <div class="paragraphe">
+                    
+	                <div class="paragraphe">
+                       
+
+
+
+                       <!-- Begin audio player comment removed 2025-11-04: No audio player on homepage -->
+</div>
+				</div>
+</div>
+    </div>
+        <div class="menu_v">
+            <div class="menu_v_ctn">
+            <p><span class="menu_v_titre">Menu</span>
+            <a href="clips.htm">Music</a><br />
+            <a href="about.htm">About</a><br />
+            <a href="gigs.htm">Gigs</a><br />
+            <a href="music.htm">Video</a><br />
+            <a href="contact.htm">Contact</a></p>
+</div>
+            <div class="menu_v_ctn">
+	            <p><span class="menu_v_titre">Links</span>
+                <a href="photos.htm">Photography</a><br />
+               <a href="https://YOUR_USERNAME.github.io/wtdaviespoetry/">Poetry</a></p>
+        </div>
+        </div>
+        <div class="clean"></div>
+        
+        <div class="foot">
+            <center>
+<span>Design by <a href="http://www.infiniteartsstudio.com">InfiniteArtsStudio.com</a>
+</span>
+</center>
+</div>
+    </div>
+    </div>
+</body>
+</html>

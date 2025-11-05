@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <link rel="stylesheet" media="all" type="text/css" href="css/style3.css" />
+    <title>Mountain Fire Band | Bluegrass Music | Bay Area</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+      <meta content="width=device-width, initial-scale=0.6" name="viewport">
+    <style>
+      body { color: #FFF; font-family: sans-serif; line-height: 1.2; background-color: #966; font-style: normal; font-weight: 300; }
+      h1 { color: #4FFFFF; font-size: 1.2em; padding: 14px 2px 12px; margin: 0px; }
+      h1 em { font-style: normal; color: #999; }
+      a { color: #888; text-decoration: none; }
+       #wrapper { width: 400px; margin-top: 20px; margin-right: auto; margin-bottom: 20px; margin-left: 20px; }
+      
+      ol { padding: 0px; margin: 0px; list-style: decimal-leading-zero inside; color: #ccc; width: 460px; border-top: 1px solid #ccc; font-size: 0.9em; }
+      ol li { position: relative; margin: 0px; padding: 9px 2px 10px; border-bottom: 1px solid #ccc; cursor: pointer; }
+      ol li a { display: block; text-indent: -3.3ex; padding: 0px 0px 0px 20px; }
+      li.playing { color: #aaa; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3); }
+      li.playing a { color: #000; }
+      li.playing:before { content: '♬'; width: 14px; height: 14px; padding: 3px; line-height: 14px; margin: 0px; position: absolute; left: -24px; top: 9px; color: #FFF; font-size: 13px; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
+      
+      #shortcuts { position: fixed; bottom: 0px; width: 100%; color: #666; font-size: 0.9em; margin: 60px 0px 0px; padding: 20px 20px 15px; background: #f3f3f3; background: rgba(240, 240, 240, 0.7); }
+      #shortcuts div { width: 460px; margin: 0px auto; }
+      #shortcuts h1 { margin: 0px 0px 6px; }
+      #shortcuts p { margin: 0px 0px 18px; }
+      #shortcuts em { font-style: normal; background: #d3d3d3; padding: 3px 9px; position: relative; left: -3px;
+        -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); }
+
+      @media screen and (max-device-width: 480px) {
+        #wrapper { position: relative; left: -3%; }
+        #shortcuts { display: none; }
+      }
+    </style>
+<script src="audiojs/jquery.js"></script>
+    <script src="audiojs/audio.js"></script>
+<script>
+$(function() { 
+        // Setup the player to autoplay the next track
+        var a = audiojs.createAll({
+          trackEnded: function() {
+            var next = $('ol li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.addClass('playing').siblings().removeClass('playing');
+            audio.load($('a', next).attr('data-src'));
+            audio.play();
+          }
+        });
+        
+        // Load in the first track
+        var audio = a[0];
+            first = $('ol a').attr('data-src');
+        $('ol li').first().addClass('playing');
+        audio.load(first);
+
+        // Load in a track on click
+        $('ol li').click(function(e) {
+          e.preventDefault();
+          $(this).addClass('playing').siblings().removeClass('playing');
+          audio.load($('a', this).attr('data-src'));
+          audio.play();
+        });
+        // Keyboard shortcuts
+        $(document).keydown(function(e) {
+          var unicode = e.charCode ? e.charCode : e.keyCode;
+             // right arrow
+          if (unicode == 39) {
+            var next = $('li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.click();
+            // back arrow
+          } else if (unicode == 37) {
+            var prev = $('li.playing').prev();
+            if (!prev.length) prev = $('ol li').last();
+            prev.click();
+            // spacebar
+          } else if (unicode == 32) {
+            audio.playPause();
+          }
+        })
+      });
+</script>
+   
+<style type="text/css">
+<!--
+body 
+{ background-image: url(images/background2.jpg); background-color: #333; }
+.site .site2 .ctn .ctn_ctn .paragraphe .paragraphe UL #wrapper OL LI A { color: #FFF; }
+.site .site2 .ctn .ctn_ctn .paragraphe .paragraphe #wrapper OL LI A { color: #FFF; text-align: left; }
+a:link { color: #FFF; }
+.site .site2 .menu_v .menu_v_ctn P { color: #FFF; }
+a:visited { color: #FFF; }
+a:hover { color: #4FFFFF; font-size: 90%; font-family: sans-serif; }
+h4 { color: #4FFFFF; }
+h5 { color: #4FFFFF; }
+.site .site2 .foot CENTER SPAN { font-size: 9px; }
+.containercenter { text-align: center; margin: 5px; padding: 5px; }
+-->
+
+</style>
+
+
+
+</head>
+
+
+<body>
+<div class="site">
+<div class="site2">
+<div class="header"></div>
+<div class="clean"></div>
+<div class="ctn">
+    
+        <div class="ctn_ctn">
+       
+
+<h1 align="center">WEBSITE ARCHIVE</h1>
+<h3 align="center">Click <a href="#clips">HERE </a>to Listen to Mountain Fire Band Music<br /></h3>
+<p align="center">&nbsp;</p>                     
+               
+                <div class="paragraphe">
+
+<!--Facebook Events
+<div class="containercenter">
+  <p align="center">
+  <div class="fb-page" data-href="https://www.facebook.com/Mountain-fire-band-248502571881809/" data-tabs="events" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div> </p>  </div>-->
+
+            
+
+ <h5 align="center"></h5>
+
+</h4>
+<br />
+<p align="center"><a href="gigs.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/Zocalo_Flyer_June_13-opt.jpg',1)"><img src="images/Zocalo_Flyer_June_13-opt.jpg" width="363" height="226" border="0" id="Image" /></a></p>
+<p align="center"><strong>This guy  was there.&nbsp; How about you??</strong></p>
+<h4 align="center">&nbsp;</h4>
+<p align="center">&nbsp;</p>
+<h2 align="center"><img src="images/facebook-placeholder.png" alt="Facebook" width="50" height="50" /></h2> 
+
+<!--Original placement of Facebook events
+<div class="containercenter"><p align="center"><div class="fb-page" data-href="https://www.facebook.com/Mountain-fire-band-248502571881809/" data-tabs="events" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div> </p>  </div> -->
+
+
+<p align="center">&nbsp;</p>
+<div class="paragraphe">
+  &nbsp;</div></div>
+                        <div class="paragraphe">
+                    
+	                <div class="paragraphe">
+                       
+                       
+                       
+                       
+                       <! Begin audio player >
+                         <div id="wrapper">
+      <h1 align="center">Mountain Fire Band<em></em> Clips, Varmint!</h1>
+      <a name="clips" id="clips"></a>
+<audio preload></audio>
+      <ol>
+        <li><a href="#" data-src="audio/mp3clips/BobbyGetYourMandolinDown.mp3">Bobby Get Your Mandolin Down (W. Davies)</a></li>
+        <li><a href="#" data-src="audio/mp3clips/NinePoundHammer.mp3">Nine Pound Hammer</a></li>
+        <li><a href="#" data-src="audio/mp3clips/Mustenos.mp3">Mustenos (J. Carr)</a></li>
+        <li><a href="#" data-src="audio/mp3clips/MauryRiverBlues.mp3">Maury River Blues</a></li>
+        <li><a href="#" data-src="audio/mp3clips/CherokeeBill.mp3">Cherokee Bill (J. Carr)</a></li>
+        <li><a href="#" data-src="audio/mp3clips/Mornin.mp3">Mornin' (W. Davies)</a></li>
+        <li><a href="#" data-src="audio/mp3clips/LongBlackVeil.mp3">Long Black Veil</a></li>
+      </ol>
+</div>
+</div>
+                    
+	                <div class="paragraphe">
+                       <! <ol> 
+                       <! </ol> 
+                        <p><iframe width="560" height="315" src="//www.youtube.com/embed/z-zf2on0Vy0?rel=0" frameborder="0" allowfullscreen></iframe>&nbsp;</p>
+					</div>
+				</div>
+</div>
+    </div>
+        <div class="menu_v">
+            <div class="menu_v_ctn">
+            <p><span class="menu_v_titre">Menu</span>
+            <a href="index.htm">Home</a><br />
+            <a href="about.htm">About</a><br />
+            <a href="gigs.htm">Gigs</a><br />
+            <a href="music.htm">Video</a><br />
+            <a href="contact.htm">Contact</a></p>
+</div>
+            <div class="menu_v_ctn">
+	            <p><span class="menu_v_titre">Links</span>
+                <a href="photos.htm">Photography</a><br />                
+               <a href="poetry.htm">Poetry</a><br />
+</p>            
+        </div>
+        </div>
+        <div class="clean"></div>
+        
+        <div class="foot">
+            <center>
+<span>Design by <a href="http://www.infiniteartsstudio.com">InfiniteArtsStudio.com</a>
+</span>
+</center>
+</div>
+    </div>
+    </div>
+</body>
+</html>

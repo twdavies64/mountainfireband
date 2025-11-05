@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <script type="text/javascript" src="js/pop.js"></script>	
+	     <link rel="stylesheet" media="all" type="text/css" href="css/styleabout.css" />
+     
+    <title>Mountain Fire Band | Bluegrass Music | Bay Area</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+      <meta content="width=device-width, initial-scale=0.6" name="viewport">
+    <style>
+      body { color: #FFF; font-family: sans-serif; line-height: 1.2; background-color: #966; }
+      h1 { color: #4FFFFF; font-size: 1.2em; padding: 14px 2px 12px; margin: 0px; text-align: center; }
+      h1 em { font-style: normal; color: #999; }
+      a { color: #888; text-decoration: none; }
+       #wrapper { width: 400px; margin-top: 20px; margin-right: auto; margin-bottom: 20px; margin-left: 20px; }
+      
+      ol { padding: 0px; margin: 0px; list-style: decimal-leading-zero inside; color: #ccc; width: 460px; border-top: 1px solid #ccc; font-size: 0.9em; }
+      ol li { position: relative; margin: 0px; padding: 9px 2px 10px; border-bottom: 1px solid #ccc; cursor: pointer; }
+      ol li a { display: block; text-indent: -3.3ex; padding: 0px 0px 0px 20px; }
+      li.playing { color: #aaa; text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3); }
+      li.playing a { color: #000; }
+      li.playing:before { content: '♬'; width: 14px; height: 14px; padding: 3px; line-height: 14px; margin: 0px; position: absolute; left: -24px; top: 9px; color: #FFF; font-size: 13px; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
+      
+      #shortcuts { position: fixed; bottom: 0px; width: 100%; color: #666; font-size: 0.9em; margin: 60px 0px 0px; padding: 20px 20px 15px; background: #f3f3f3; background: rgba(240, 240, 240, 0.7); }
+      #shortcuts div { width: 460px; margin: 0px auto; }
+      #shortcuts h1 { margin: 0px 0px 6px; }
+      #shortcuts p { margin: 0px 0px 18px; }
+      #shortcuts em { font-style: normal; background: #d3d3d3; padding: 3px 9px; position: relative; left: -3px;
+        -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); }
+
+      @media screen and (max-device-width: 480px) {
+        #wrapper { position: relative; left: -3%; }
+        #shortcuts { display: none; }
+      }
+    </style>
+<script src="audiojs/jquery.js"></script>
+    <script src="audiojs/audio.js"></script>
+<script>
+$(function() { 
+        // Setup the player to autoplay the next track
+        var a = audiojs.createAll({
+          trackEnded: function() {
+            var next = $('ol li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.addClass('playing').siblings().removeClass('playing');
+            audio.load($('a', next).attr('data-src'));
+            audio.play();
+          }
+        });
+        
+        // Load in the first track
+        var audio = a[0];
+            first = $('ol a').attr('data-src');
+        $('ol li').first().addClass('playing');
+        audio.load(first);
+
+        // Load in a track on click
+        $('ol li').click(function(e) {
+          e.preventDefault();
+          $(this).addClass('playing').siblings().removeClass('playing');
+          audio.load($('a', this).attr('data-src'));
+          audio.play();
+        });
+        // Keyboard shortcuts
+        $(document).keydown(function(e) {
+          var unicode = e.charCode ? e.charCode : e.keyCode;
+             // right arrow
+          if (unicode == 39) {
+            var next = $('li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.click();
+            // back arrow
+          } else if (unicode == 37) {
+            var prev = $('li.playing').prev();
+            if (!prev.length) prev = $('ol li').last();
+            prev.click();
+            // spacebar
+          } else if (unicode == 32) {
+            audio.playPause();
+          }
+        })
+      });
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+   
+<style type="text/css">
+<!--
+body { background-image: url(images/background2.jpg); background-color: #333; background-repeat: repeat-x; }
+.site .site2 .ctn .ctn_ctn .paragraphe .paragraphe UL #wrapper OL LI A { color: #FFF; }
+.site .site2 .ctn .ctn_ctn .paragraphe .paragraphe #wrapper OL LI A { color: #FFF; text-align: left; }
+a:link { color: #FFF; }
+.site .site2 .menu_v .menu_v_ctn P { color: #FFF; }
+a:visited { color: #FFF; }
+a:hover { color: #D6D6D6; }
+h4 { color: #4FFFFF; }
+h5 { color: #4FFFFF; }
+.site .site2 .foot CENTER SPAN { font-size: 9px; }
+-->
+
+</style>
+
+
+
+
+
+</head>
+<body bgcolor="#666666" onload="MM_preloadImages('images/billdavies.jpg','images/BobBlanshard-1.jpg','images/MFB1-1.jpg','images/JeremyCohen.jpg')">
+  
+   <!--css popup window 1 (Bill)-->
+<div style="display: none;" id="blanket"></div>
+<div style="display: none;" id="popUpDiv">
+<a onclick="popup('popUpDiv')" href="#"><img alt="" src="images/close.jpg" /></a><br />
+<p class="popup">Bill studied forestry and agriculture in college. A move to Colorado found him at the headwaters of the Frying Pan river working at a sawmill skidding logs with horses by day and singing songs around the warmth of the camp stove at night.  He raised a family and managed a ski lodge on Donner Summit, Ca. where he organized bluegrass festivals and shared his love of the mountains and music with tourists and the Tahoe Truckee community.
+<BR /><BR />Bill’s cowboy poetry celebrates the preservation of the arts and life of rural communities and the real working west.  His poems can be found at cowboypoetry.com/billdavies where he is a featured poet and songwriter. He has also been a contributor to the development of the Oakdale Cowboy Museum’s recent exhibit, “Tales of the Yosemite Back-country” which celebrates the 150 year commemorative signing of the Yosemite Land Grant Act by Abraham Lincoln.      
+</p>
+</div>
+<!--css popup window 1 close-->
+
+<!--css popup window 2 (Bob)-->
+<div style="display: none;" id="blanket"></div>
+<div style="display: none;" id="popUpDiv2">
+<a onclick="popup('popUpDiv2')" href="#"><img alt="" src="images/close.jpg" /></a><br />
+<p class="popup">Bob Blanshard is well known in the California bluegrass community for his mandolin work but also is a sought after classical bassist who currently plays in three Bay Area orchestras. Bob's first love however, being bluegrass mandolin. Bill and Bob have been playing as a duo since 1990 when they first met in Weiser, Idaho.</p>
+</div>
+<!--css popup window 2 close-->
+
+
+
+ 
+<div class="site">
+    <div class="site2">
+<div class="header"></div>
+        <div class="clean"></div>
+        <div class="ctn">
+        <div class="ctn_ctn">
+                            <h2 align="center"><strong>About The Band</strong></h2>
+<div class="paragraphe">
+                    
+<div class="paragraphe">
+                       
+                       
+                       
+                       
+                       <! Begin audio player >
+</div>
+                    
+	                <div class="paragraphe">
+                       <! <ol> 
+                       <! </ol> 
+                        <!--<p align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','images/MFB1-1.jpg',1)"><img src="images/MFB1-3.jpg" width="380" height="283" border="0" id="Image3" /></a></p> -->
+<p align="left">Bill Davies’  Mountain Fire Band brings a fresh, raw edge to traditional bluegrass, original tunes and honky tonk harmonies putting a smile on the face of all who hear them play. Mountain Fire Band’s message is a simple one: Get the dogs to bark and howl---<strong>OHWOOOO!</strong>
+<!--About Bill -->
+</p>
+<p>&nbsp;</p>
+<h3 align="center">Bill Davies&nbsp; - guitar and vocals</h3>
+<p align="left">&nbsp;</p>
+<center>
+<a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/billdavies.jpg',1)"><img src="images/billdavies-2.jpg" width="350" height="233" border="0" id="Image1" /></a>
+</p>
+</center>
+<p align="left">A 4th generation native of California, Bill Davies has always been a student of that “high lonesome sound”.  Drawn to classic country and bluegrass genres of the early 1940’s and 50’s, Bill started playing guitar, singing and writing his own songs and poems at an early age.  Bill’s rich life experiences have inspired his song writing and poetry, crafted in authentic roots, old timey and cowboy stylings.  As a youth Bill travelled to Montana, guitar in hand, to work his uncle’s wheat and cattle ranch during the summer harvests.  <a onclick="popup('popUpDiv')" href="#">Click to Read More.....</a></p>
+<p>&nbsp;</p>
+<!--End About Bill -->
+<p>&nbsp;</p>
+<h3 align="center">Bob Blanchard&nbsp; - mandolin and vocals</h3>
+<p align="left">&nbsp;</p>
+<center>
+<a href="images/BobBlanshard-2.jpg" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/billdavies.jpg',1)"><img src="images/BobBlanshard-2.jpg" width="216" height="350" border="0" id="Image1" /></a>
+</p>
+</center>
+<p align="left">Bob Blanshard started playing piano at the age of 6 years old. He was well known in the California bluegrass community for his mandolin work. Although Bob's first love  was bluegrass mandolin, he was also a sought- after classical bassist who  played in three Bay Area orchestras.  Bill and Bob started playing as a duo in 1990 when they first met in Weiser, Idaho. </p>
+<p>&nbsp;</p>
+
+<h3 align="center">Alec&nbsp; Oyung&nbsp; - guitar, banjo, dobro</h3>
+<p align="center">&nbsp;</p>
+<p align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/BobBlanshard-1.jpg',1)"><img src="images/AlecNashville2012_03.jpg" alt="" width="221" height="300" border="3" id="Image5" /></a></p>
+<p>Oakland native Alec Oyung was exposed to bluegrass and americana music early on, listening to Norman Blake and Flatt and Scruggs on the family turntable.  He began taking Bluegrass banjo lesson at 11 years old.  Alec <span id="yui_3_13_0_1_1398092549599_18520" style="line-height:1.22;">later picked up the guitar while attending UC</span><span id="yui_3_13_0_1_1398092549599_18518" style="line-height:1.22;">Santa Cruz.  He might also be seen occasionally pickin’ on a mandolin or dobro.  When not playing music, Alec works as a video producer and editor, and has combined his love of music and video, producing videos for Artistworks online music lessons, Joe Craven and <a href="https://www.youtube.com/watch?v=qjyEwSolH2U">Strawberry Music Festival</a>. </span></p>
+
+
+<h3 align="center">Matt Crimp&nbsp; - fiddle</h3>
+<p align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/JeremyCohen.jpg',1)"><img src="images/matthewCrimp-2.jpg" alt="" width="250" height="167" border="0" id="Image6" /></a></p>
+<p>Born and raised in Anchorage Alaska, Matt's first exposure to the fiddle was through Anchorage's thriving folk music scene. Playing through the long hours of winter nights, Matt developed a love for Bluegrass, Jazz and Dawg music. He has played locally in California with American Nomad and the Spare Strings. Between his seasonal business in the Alaska Salmon fisheries and his work as an accomplished fiddle player, Matt finds time to sit in with the  Mountain Fire Band when he is down in the lower 48.  <a href="http://www.mattcrimpmusic.com/">http://www.mattcrimpmusic.com/</a></p>
+
+<!--About Tom -->
+<h3 align="center">Tom Davies&nbsp; - bass and vocals</h3>
+<p>&nbsp;</p>
+<p align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','images/imagecomingsoon.png',1)"><img src="images/imagecomingsoon.png" width="178" height="226" border="3" id="Image7" /></a></p>
+<p align="left">Solidly grounding the Mountain Fire experience on bass is Bill's son Tom Davies. Tom grew up on Donner Summit and was influenced by  his rural surroundings, a musical family and his affiliation with the California Bluegrass Association. Tom has toured the western United States, playing guitar with the award winning  Donner Mountain Bluegrass Band.  The  Band has  opened for the great blues musician Buddy Guy, Los Lobos  and other  grammy nominated luminaries.&nbsp; Tom has played many festivals including Warren Hellman's Hardly Strictly Bluegrass festival in San Francisco.</p>
+<!--End About Tom -->
+
+
+<h3 align="center">Special Guest Artist Jeremy Cohen</h3>
+<h4>Jeremy Cohen - fiddle</h4>
+<p align="center"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/JeremyCohen.jpg',1)"><img src="images/JeremyCohen.jpg" width="176" height="264" border="0" id="Image4" /></a></p>
+<p align="left">Long time friend and frequent guest of the band, Jeremy's electrifying violin performances have earned him nationwide accolades. Among his many credits, Jeremy appeared on Carlos Santana’s Grammy-winning CD “Supernatural” and has toured and recorded with the 2006 Grammy winners, the Turtle Island String Quartet.&nbsp; Visit Jeremy's website at <a href="http://www.jeremycohen.com">www.jeremycohen.com</a></p>
+<h3>&nbsp;</h3>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+					</div>
+				</div>
+</div>
+    </div>
+        <div class="menu_v">
+            <div class="menu_v_ctn">
+            <p><span class="menu_v_titre">Menu</span>
+            <a href="index.htm">Home</a><br />
+            <a href="clips.htm">Music</a><br />
+            <a href="gigs.htm">Gigs</a><br />
+            <a href="music.htm">Video</a><br />
+            <a href="contact.htm">Contact</a></p>
+</div>
+            <div class="menu_v_ctn">
+	            <p><span class="menu_v_titre">Links</span>
+                <a href="photos.htm">Photography</a><br />                
+               <a href="poetry.htm">Poetry</a></p>            
+        </div>
+        </div>
+        <div class="clean"></div>
+        
+        <div class="foot">
+            <center>
+<span>Design by <a href="http://www.infiniteartsstudio.com">InfiniteArtsStudio.com</a>
+</span>
+</center>
+</div>
+    </div>
+    </div>
+</body>
+</html>

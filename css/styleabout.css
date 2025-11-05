@@ -1,0 +1,135 @@
+body
+{
+	background:#000000;
+	margin:0px;
+	padding:0px;
+}
+.site
+{
+	background:url('') no-repeat top center;
+}
+.site2
+{ width:775px; margin: auto; background-image: url(../images/s2-background-2.jpg); background-repeat: no-repeat; background-position: center top; }
+img
+{
+	border:0px;
+}
+a
+{
+	color:#222222;
+	text-decoration:none;
+}
+a:hover
+{ color:#FFF; }
+.header
+{
+	font-size:60px;
+	font-family:Arial, Helvetica, sans-serif;
+	height:93px;
+	color:#ffffff;
+	padding-top:15px;
+	margin-bottom:10px;
+}
+.foot
+{ margin:auto; text-align:left; height:40px; padding-top:10px; }
+.foot a,.foot
+{
+	color:#777777;
+}
+.foot:hover a,.foot:hover
+{
+	color:#999999;
+}
+.foot a:hover
+{ color:#dddddd; text-align: justify; }
+.menu_v
+{ margin-bottom:10px; margin-left:565px; margin-top:180px; }
+.menu_v_titre
+{ color:#4FFFFF; font-weight:bold; display:block; margin-left:-5px; font-size:18px; }
+.menu_v_ctn
+{
+	padding-left:10px;
+	color:#ffffff;
+	margin-left:30px;
+}
+.menu_v_ctn a
+{
+	color:#cccccc;
+}
+.menu_v_ctn a:hover
+{ color:#CCC; }
+.ctn
+{ width:540px; margin-bottom:10px; float:left; margin-left:40px; margin-top:160px; color:#ffffff; }
+.ctn_ctn
+{
+	padding-left:5px;
+	padding-right:5px;
+}
+.clean
+{
+	clear:both;
+}
+h1,h2,h3,h4,h5,h6,p
+{
+	margin:0px;
+}
+h1,h2,h3
+{ color:#4FFFFF; margin-left:10px; padding-top:5px; border-bottom-width: 2px; border-bottom-style: solid; }
+h4,h5,h6
+{
+	color:#4FFFFF;
+	margin-left:10px;
+	padding-top:5px;
+}
+.paragraphe,p
+{ padding-left:9px; padding-bottom:5px; padding-top:5px; color: #cccccc; }
+ul
+{ }
+ul,ol
+{
+	margin:0px;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:10px;
+}
+
+/* popup 1
+----------------------------------------------------------------------*/
+
+/*p { font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; font-size: 100px; margin-top: 200px; text-align:center; } */
+
+p.popup { font-size: 12px; margin: 0px; text-align: left; color: black; font-weight: bold;}
+a { text-decoration: none; color: #ff0000; font-weight: bold;}
+
+#blanket {
+	background-color: #666;
+	opacity: .65; 
+	filter: alpha(opacity=45); 
+	position: absolute;
+	z-index: 9001;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+#popUpDiv {
+	position: absolute;
+	background-color: #fff;
+	width: 500px;
+	height: 330px;
+	z-index: 9002;
+	padding: 20px;
+}
+
+
+/* popup 2
+----------------------------------------------------------------------*/
+
+#popUpDiv2 {
+	position: absolute;
+	background-color: #fff;
+	width: 500px;
+	height: 330px;
+	z-index: 9002;
+	padding: 20px;
+}

@@ -1,0 +1,276 @@
+﻿/*
+
+
+PRIMARY COLORS:
+
+gray: #ffffff;
+yellow/gold: #e2d523;
+green: #b4d6c6;
+pink: #eb6daa;
+green (links): #d5e4dc;
+
+
+*/
+
+
+html
+{
+	/* background: url(../images/htmlBG.jpg) repeat-x 0 -2px; */
+}
+
+
+
+
+body
+{
+	font-size: 90%;
+	font-family: helvetica, georgia, sans-serif;
+	line-height: 1.6em;
+	text-align: center;
+	color: #444444;
+}
+
+ul, li, img, body, html
+{ margin: 0; padding: 0; text-align: center; }
+
+a
+{
+	text-decoration: none;
+	color: #3399cc;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+a img
+{
+	border: none;
+}
+
+h3
+{ /* background: url(../images/silverGradient.jpg) repeat-x; */ background-color: #eaeaea; color: #444444; margin-top: 0; margin-bottom: 0; -moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; -webkit-border-top-left-radius: 10px; -webkit-border-top-right-radius: 10px; text-align: center; text-transform: none; font-weight: normal; padding-top: 0.2em; padding-right: 0.5em; padding-bottom: 0.2em; padding-left: 0.5em; border-top-width: 0px; }
+
+h2
+{
+	font-family: georgia;
+}
+
+
+.fr
+{
+	float: right;
+	padding: 1em 0 1em 1em;
+}
+
+.fl
+{
+	float: left;
+	padding: 1em 1em 1em 0;
+}
+
+#container
+{ margin: auto; width: 970px; /* background: url(../images/containerBG.png) repeat-y; */ height: 950px; }
+
+#container ul, #container ul li a
+{ list-style-type: none; font-weight: bold; text-align: justify; }
+
+#header
+{ position: relative; overflow: hidden; font-weight: bold; background-image: none; height: auto; background-repeat: no-repeat; }
+
+
+#header h5 {
+font-weight: normal;
+}
+
+#header h1
+{
+	display: none;
+}
+
+#header p
+{ margin-top: 25px; width: 970px; padding: .6em 0 .6em .5em; /* background: url(../images/silverGradient.jpg) repeat-x; */ background-color: #eaeaea; margin-bottom: 0; color: #333; letter-spacing: .19em; font-size: 1.1em; border-top: 1px solid #dfe2e5; border-bottom: 1px solid #dfe2e5; font-family: Verdana, Geneva, sans-serif; font-style: italic; }
+
+#sidebar
+{ width: 188px; float: left; /* background: url(../images/silverGradient4.gif) ; */ background-color: #eaeaea;
+}
+
+/* SIDEBAR */
+
+#sidebar ul#nav li
+{
+	border-top: 1px solid #f6f4f4;
+	border-bottom: 1px solid #b2b2b2;
+	text-align: right;
+	padding-right: .5em;
+	line-height: 1.7em;
+	font-size: 1.25em;
+}
+
+#sidebar ul#nav li:hover
+{
+	border-top: 1px solid white;
+	background-color: #d4dad7; /* background: #d4dad7 url(../images/arrow.png) 2% 50% no-repeat; */
+}
+
+ul#nav li a
+{
+	color: #444444;
+}
+
+#nav li a:hover
+{ text-decoration: none; color: #FFF; }
+
+#sidebar h2
+{
+	background: #eb6daa;
+	color: #fefbfb;
+	padding: .2em;
+	text-align: center;
+	margin-bottom: .4em;
+}
+
+#sidebar ul#sbimages
+{
+	text-align: center;
+	background: #d5e4dc;
+}
+
+ul#sbimages li
+{ margin-bottom: .7em; font-size: 90%; }
+#container #sidebar #sbimages LI H1 STRONG { font-size: 65%; color: #515151; text-align: justify; }
+
+
+
+/* MAIN CONTENT */
+
+#mainContent
+{ margin-left: auto; text-align: right; padding-top: 0; padding-right: 1em; padding-bottom: 0; padding-left: 1em; height: auto; }
+
+#mainContent div
+{
+	overflow: hidden;
+}
+
+#tier1, #tier2, #tier3
+{ margin-bottom: 1em; padding-left: 0.5em; padding-right: 0.5em; }
+
+#tier1 div, #tier2 div,  #tier3 div div
+{ -moz-border-radius: 10px; -webkit-border-radius: 10px; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; padding-top: 0; padding-right: 1em; padding-bottom: 0; padding-left: 0.50em; }
+
+#mainContent #tier1
+{ height: 725px; padding-top: 0.6em; font-size: 100%; }
+
+#tier1 #featured
+{
+	height: 426px;
+	float: left;
+	width: 100%;
+	border: none;
+	padding: 0;
+	margin-right: 0.5em;
+}
+
+#mainContent #tier1 #topLogo
+{ height: 222px; width: 11em; text-align: left; margin: 0 0 0 0; padding: 0; position: relative; }
+
+#contactNow h3
+{
+	background-color: #eaeaea; /* background: #eaeaea url(../images/contact-us-now-small.gif) no-repeat 95% 40%; */
+}
+
+
+#contactNow img
+{
+	padding-top: .5em;
+	padding-left: .3em;
+}
+
+#mainContent #tier1 img
+{
+	float: left;
+	margin-right: 1em;
+}
+
+#tier1 img#featuredImage
+{
+	width: 69em;
+}
+
+#mainContent #tier2
+{ text-align: center; font-size: 100%; margin-top: 0; margin-right: auto; margin-bottom: 1em; }
+
+#tier2 h3
+{ text-align: center; color: #666; font-weight: bold; }
+
+h3#ourMission
+{ width: 93.5%; /* background: url(../images/silverGradient2.jpg) repeat-x; */ background-color: #eaeaea; margin-bottom: 0; color: #666; border-top: 1px solid #dfe2e5; border-bottom: 1px solid #56fed8; }
+
+
+h3#whatSetsUs
+{ width: 93.5%; /* background: url(../images/silverGradient2.jpg) repeat-x; */ background-color: #eaeaea; margin-bottom: 0; color: #666; border-top: 1px solid #dfe2e5; border-bottom: 1px solid #56fed8; text-align: center; }
+
+.ourCaregivers h3
+{ width: 93.5%; /* background: url(../images/silverGradient2.jpg) repeat-x; */ background-color: #eaeaea; margin-bottom: 0; color: #00aeef;  border-top: 1px solid #dfe2e5; border-bottom: 1px solid #56fed8; }
+
+#tier2 img
+{
+	padding-top: .5em;
+	width: 99%;
+}
+
+
+
+#mainContent #tier2 div
+{ float: left; width: 31.5%; margin-right: 0.9em; font-weight: bold; padding-top: 0; padding-right: 0; padding-bottom: 0.5em; padding-left: 0; color: #666; }
+
+#mainContent #tier2 div.third
+{
+	margin-right: 0;
+}
+
+#tier2 div p
+{ margin-top: .3em; padding: 0 .5em; text-align: left; }
+
+#mainContent #tier3
+{ position: relative; text-align: center; }
+
+#tier3 h2
+{ padding-left: .5em; margin-bottom: .2em; color: #50A8F3; background-color: #E4E4E4; font-size: 110%; font-style: italic; }
+
+#tier3 span
+{ font-style: italic; margin: 0; padding-left: .7em; margin-bottom: -.6em; display: block; color: #C09; }
+
+#tier3 #tier3 img
+{
+	width: 100%;
+}
+
+#mainContent #tier3 div
+{ padding-bottom: 0.5em; padding-right: 0em; margin-top: 0; margin-right: 0.3em; margin-bottom: 0.5em; margin-left: 0em; padding-top: 0; padding-left: 0em; font-size: 1.10em; font-weight: bold; text-align: justify; font-family: Georgia, "Times New Roman", Times, serif; }
+
+#tier3 div#questions
+{ width: 32%; float: left; font-size: 70%; }
+
+
+#tier3 p, #tier3 input
+{ padding: 0 1em; text-align: left; }
+
+#tier3 #questions p small
+{
+	display: block;
+}
+
+#questions img
+{
+	width: 100%;
+}
+
+#tier3 h3#haveAQuestion
+{ background-color: #eaeaea; /* background: #eaeaea url(../images/email.png) no-repeat 95% 40%; */ color: #666; }
+
+
+
+#footer
+{ clear: both; text-align: center; }
