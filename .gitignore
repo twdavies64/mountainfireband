@@ -1,0 +1,21 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Potential Sensitive Files
+.env
+.env.local
+*.key
+*.pem
+
+# Build Artifacts (future-proofing)
+node_modules/
+dist/
+.cache/
