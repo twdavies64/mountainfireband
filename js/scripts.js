@@ -9,7 +9,6 @@ $(function() {
         speed: 1500,
         timeout: 9000,
         type: 'sequence',
-        containerheight: '729px'
+        containerheight: '733px'
     });
-
 });
