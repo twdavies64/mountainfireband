@@ -1,11 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
      <link rel="stylesheet" media="all" type="text/css" href="css/style3.css" />
     <title>Mountain Fire Band | Bluegrass Music | Bay Area</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-      <meta content="width=device-width, initial-scale=0.6" name="viewport">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; upgrade-insecure-requests;" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta content="width=device-width, initial-scale=0.6" name="viewport">
     <style>
       body { color: #FFF; font-family: sans-serif; line-height: 1.2; background-color: #966; }
       h1 { color: #4FFFFF; font-size: 1.2em; padding: 14px 2px 12px; margin: 0px; text-align: center; }
@@ -33,54 +37,6 @@
         #shortcuts { display: none; }
       }
     </style>
-<script src="audiojs/jquery.js"></script>
-    <script src="audiojs/audio.js"></script>
-<script>
-$(function() { 
-        // Setup the player to autoplay the next track
-        var a = audiojs.createAll({
-          trackEnded: function() {
-            var next = $('ol li.playing').next();
-            if (!next.length) next = $('ol li').first();
-            next.addClass('playing').siblings().removeClass('playing');
-            audio.load($('a', next).attr('data-src'));
-            audio.play();
-          }
-        });
-        
-        // Load in the first track
-        var audio = a[0];
-            first = $('ol a').attr('data-src');
-        $('ol li').first().addClass('playing');
-        audio.load(first);
-
-        // Load in a track on click
-        $('ol li').click(function(e) {
-          e.preventDefault();
-          $(this).addClass('playing').siblings().removeClass('playing');
-          audio.load($('a', this).attr('data-src'));
-          audio.play();
-        });
-        // Keyboard shortcuts
-        $(document).keydown(function(e) {
-          var unicode = e.charCode ? e.charCode : e.keyCode;
-             // right arrow
-          if (unicode == 39) {
-            var next = $('li.playing').next();
-            if (!next.length) next = $('ol li').first();
-            next.click();
-            // back arrow
-          } else if (unicode == 37) {
-            var prev = $('li.playing').prev();
-            if (!prev.length) prev = $('ol li').last();
-            prev.click();
-            // spacebar
-          } else if (unicode == 32) {
-            audio.playPause();
-          }
-        })
-      });
-</script>
    
 <style type="text/css">
 <!--
@@ -124,12 +80,12 @@ Heading7 { color: #FFF; }
                        
                        
                        
-                       <! Begin audio player >
+                       <!-- Begin audio player -->
 </div>
                     
 	                <div class="paragraphe">
-                       <! <ol> 
-                       <! </ol> 
+                       <!-- <ol> -->
+                       <!-- </ol> --> 
                         <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -184,7 +140,7 @@ Heading7 { color: #FFF; }
         
         <div class="foot">
             <center>
-<span>Design by <a href="http://www.infiniteartsstudio.com">InfiniteArtsStudio.com</a>
+<span>Design by <a href="https://www.infiniteartsstudio.com">InfiniteArtsStudio.com</a>
 </span>
 </center>
 </div>

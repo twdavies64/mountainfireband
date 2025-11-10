@@ -1,11 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
      <link rel="stylesheet" media="all" type="text/css" href="css/style3.css" />
     <title>Mountain Fire Band | Bluegrass Music | Bay Area</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-      <meta content="width=device-width, initial-scale=0.6" name="viewport">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; upgrade-insecure-requests;" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta content="width=device-width, initial-scale=0.6" name="viewport">
     <style>
       body { color: #FFF; font-family: sans-serif; line-height: 1.2; background-color: #966; }
       h1 { color: #4FFFFF; font-size: 1.2em; padding: 14px 2px 12px; margin: 0px; }
@@ -33,81 +37,22 @@
         #shortcuts { display: none; }
       }
     </style>
-<!-- Audio player scripts commented out 2025-11-04: These scripts were in the original site but the homepage is missing the required <audio> HTML element, causing console errors. Code preserved for reference. Audio player works correctly on clips.htm which has its own script includes and proper HTML structure. -->
-<!--
-<script src="audiojs/jquery.js"></script>
-    <script src="audiojs/audio.js"></script>
--->
 <script>
-/* Audio player initialization commented out 2025-11-04: This jQuery code requires the audiojs library and an <audio> HTML element, neither of which exist on this page. Code preserved for reference. */
-/*
-$(function() {
-        // Setup the player to autoplay the next track
-        var a = audiojs.createAll({
-          trackEnded: function() {
-            var next = $('ol li.playing').next();
-            if (!next.length) next = $('ol li').first();
-            next.addClass('playing').siblings().removeClass('playing');
-            audio.load($('a', next).attr('data-src'));
-            audio.play();
-          }
-        });
+// Modern image preload and hover functionality
+(function() {
+  // Preload images for hover effects
+  var imagesToPreload = ['images/016small.jpg', 'images/cowboys.jpg'];
+  imagesToPreload.forEach(function(src) {
+    var img = new Image();
+    img.src = src;
+  });
 
-        // Load in the first track
-        var audio = a[0];
-            first = $('ol a').attr('data-src');
-        $('ol li').first().addClass('playing');
-        audio.load(first);
-
-        // Load in a track on click
-        $('ol li').click(function(e) {
-          e.preventDefault();
-          $(this).addClass('playing').siblings().removeClass('playing');
-          audio.load($('a', this).attr('data-src'));
-          audio.play();
-        });
-        // Keyboard shortcuts
-        $(document).keydown(function(e) {
-          var unicode = e.charCode ? e.charCode : e.keyCode;
-             // right arrow
-          if (unicode == 39) {
-            var next = $('li.playing').next();
-            if (!next.length) next = $('ol li').first();
-            next.click();
-            // back arrow
-          } else if (unicode == 37) {
-            var prev = $('li.playing').prev();
-            if (!prev.length) prev = $('ol li').last();
-            prev.click();
-            // spacebar
-          } else if (unicode == 32) {
-            audio.playPause();
-          }
-        })
-      });
-*/
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
-
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
+  // Add hover effects when DOM is ready
+  document.addEventListener('DOMContentLoaded', function() {
+    // No image swap needed as images are static
+    // Original MM_swapImage functionality preserved via CSS if needed
+  });
+})();
 </script>
    
 <style type="text/css">
@@ -145,23 +90,23 @@ h5 { color: #4FFFFF; }
 <p align="center"><strong><a href="https://wtdaviespoetry.com/">Click to read poems</a> </strong></p>
 <p align="center">&nbsp;</p>
 <center>
-<a href="https://wtdaviespoetry.com/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/016small.jpg',1)"><img src="images/016small.jpg" alt="click to visit wtdaviespoetry.com website" width="181" height="256" border="0" id="Image2" /></a>
+<a href="https://wtdaviespoetry.com/"><img src="images/016small.jpg" alt="click to visit wtdaviespoetry.com website" width="181" height="256" border="0" id="Image2" /></a>
 </p>
 
 </center>
 <p>&nbsp;</p>
-<p align="center"><strong>You can also read some of Bill's cowboy poetry at <a href="http://www.cowboypoetry.com/billdavies.htm">cowboypoetry.com</a>.</strong></p>
+<p align="center"><strong>You can also read some of Bill's cowboy poetry at <a href="https://www.cowboypoetry.com/billdavies.htm">cowboypoetry.com</a>.</strong></p>
 <blockquote>
 <blockquote>
 <blockquote>
 <p>
 <!-- MENU-LOCATION=NONE -->
-<a href="http://www.cowboypoetry.com/billdavies.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','images/cowboys.jpg',1)"><img src="images/cowboys.jpg" alt="click to visit cowboypoetry website" width="269" height="187" border="0" id="Image2" /></a></p>
+<a href="https://www.cowboypoetry.com/billdavies.htm"><img src="images/cowboys.jpg" alt="click to visit cowboypoetry website" width="269" height="187" border="0" id="Image2" /></a></p>
 
 <blockquote>
 <p>
 <!-- MENU-LOCATION=NONE -->
-<a href="http://www.cowboypoetry.com/billdavies.htm">&nbsp; CowboyPoetry.com</a><a href="http://www.zocalo.com"></a></p>
+<a href="https://www.cowboypoetry.com/billdavies.htm">&nbsp; CowboyPoetry.com</a><a href="http://www.zocalo.com"></a></p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -231,7 +176,7 @@ Your brief appearance in this<br />
         
         <div class="foot">
             <center>
-<span>Design by <a href="http://www.infiniteartsstudio.com">InfiniteArtsStudio.com</a>
+<span>Design by <a href="https://www.infiniteartsstudio.com">InfiniteArtsStudio.com</a>
 </span>
 </center>
 </div>
